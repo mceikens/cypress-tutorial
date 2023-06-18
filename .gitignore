@@ -10,3 +10,5 @@ cypress/screenshots/*
 cypress/videos
 cypress/videos/*
 cypress/parallel-weights.json
+runner-results
+runner-results/*
