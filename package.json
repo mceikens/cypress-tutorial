@@ -1,0 +1,40 @@
+{
+  "name": "mceikens-typo3-cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mceikens/cypress-tutorial",
+  "author": "Eike Drost <eike.drost@mceikens.de>",
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
+    "cypress": "^12.14.0",
+    "cypress-localstorage-commands": "^2.2.3",
+    "cypress-multi-reporters": "^1.6.3",
+    "cypress-parallel": "^0.13.0",
+    "cypress-wait-until": "^2.0.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-cypress": "^2.13.3",
+    "lint-staged": "^13.2.2",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "typescript": "^5.1.3"
+  },
+  "scripts": {
+    "cy:run": "cypress run",
+    "e2e:start:local": "cypress open --config-file config/local/cypress.config.ts",
+    "e2e:run:local": "cypress run --config-file config/local/cypress.config.ts",
+    "e2e:run:local:parallel": "cypress-parallel -s cy:run -t 4 -d ./cypress/e2e -a '\"--config-file config/local/cypress.config.ts\"'",
+    "e2e:start:stage": "cypress open --config-file config/stage/cypress.config.ts",
+    "e2e:run:stage": "cypress run --config-file config/stage/cypress.config.ts",
+    "e2e:run:stage:parallel": "cypress-parallel -s cy:run -t 4 -d ./cypress/e2e -a '\"--config-file config/stage/cypress.config.ts\"",
+    "e2e:start:prod": "cypress open --config-file config/prod/cypress.config.ts",
+    "e2e:run:prod": "cypress run --config-file config/prod/cypress.config.ts",
+    "e2e:run:prod:parallel": "cypress-parallel -s cy:run -t 4 -d ./cypress/e2e -a '\"--config-file config/prod/cypress.config.ts\"",
+    "lint": "eslint .",
+    "prettier": "prettier --write --ignore-unknown './**/*.{js,ts,json}'",
+    "prettier:check": "prettier --check --ignore-unknown './**/*.{js,ts,json}'"
+  }
+}

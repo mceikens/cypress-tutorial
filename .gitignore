@@ -1,0 +1,12 @@
+yarn.lock
+.idea
+.idea/*
+node_modules
+node_modules/*
+mochawesome-report
+mochawesome-report/*
+cypress/screenshots
+cypress/screenshots/*
+cypress/videos
+cypress/videos/*
+cypress/parallel-weights.json
